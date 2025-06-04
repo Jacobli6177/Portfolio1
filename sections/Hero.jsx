@@ -1,9 +1,6 @@
 import React from 'react'
+import { words } from '../src/constants'
 
-const words = [
-    { text: 'Ideas', imgPath: '/images/ideas.svg'},
-    { text: 'Concepts', imgPath: '/images/concepts.svg'},
-]
 const Hero = () => {
   return (
     <section>
@@ -24,6 +21,7 @@ const Hero = () => {
                                         </span>
                                     ))}
                                 </span>
+                                <span> {words.text}</span>
                             </span>
                         </h1>
                         <h1> Into Real Projects</h1>
