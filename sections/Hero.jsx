@@ -13,7 +13,11 @@ const Hero = () => {
         opacity: 0
       },
       {
-        
+        y:0,
+        opacity:1,
+        stagger: 0.2,
+        duration: 1,
+        ease: 'power2.inOut'
       }
     )
   })
