@@ -1,7 +1,8 @@
 import Hero from "../sections/Hero"
 import ShowcaseSection from "../sections/ShowcaseSection"
-import LogoSection from "./components/LogoSection"
+import LogoSection from "../sections/LogoSection"
 import NavBar from "./components/NavBar"
+import FeaturedCards from "../sections/FeaturedCards"
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <Hero/>
       <ShowcaseSection/>
       <LogoSection/>
+      <FeaturedCards/>
     </>
   )
 }
