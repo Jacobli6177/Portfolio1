@@ -1,30 +1,34 @@
-import React from 'react'
-import TitleHeader from '../src/components/TitleHeader'
-import { testimonials } from '../src/constants'
-import { GlowCard } from '../src/components/HeroModels/GlowCard';
+import { testimonials } from "../src/constants";
+import TitleHeader from "../src/components/TitleHeader";
+import GlowCard from "../src/components/HeroModels/GlowCard";
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className='flex-center section-padding'>
-      <div className='w-full h-full md:px-10 px-5'>
-        <TitleHeader title="What People say about me" sub="Client FeedBack Highlights"/>
-        <div className='lg:columns-3 md:columns-2 columns-1 mt-16'> 
-          {testimonials.map(( { imgPath, name, mentions, review }) => (
-            <GlowCard card= { { review }}>
-              <div className='flex items-center gap-3'>
-                <img src={imgPath} alt={name}/>
-              </div>
-              <div>
-                <p className='font-bold'> {name} </p>
-                <p className='text-white-50'> {mentions} </p>
+    <section id="testimonials" className="flex-center section-padding">
+      <div className="w-full h-full md:px-10 px-5">
+        <TitleHeader
+          title="What People Say About Me?"
+          sub="⭐️ Customer feedback highlights"
+        />
+
+        <div className="lg:columns-3 md:columns-2 columns-1 mt-16">
+          {testimonials.map((testimonial, index) => (
+            <GlowCard card={testimonial} key={index} index={index}>
+              <div className="flex items-center gap-3">
+                <div>
+                  <img src={testimonial.imgPath} alt="" />
+                </div>
+                <div>
+                  <p className="font-bold">{testimonial.name}</p>
+                  <p className="text-white-50">{testimonial.mentions}</p>
+                </div>
               </div>
             </GlowCard>
-
           ))}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;
