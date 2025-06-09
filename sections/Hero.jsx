@@ -67,7 +67,7 @@ const Hero = () => {
         </figure>
       </div>
 
-      <AnimatedCounter/>
+      <AnimatedCounter/> {/* is the experience part with project*/}
     </section>
   )
 }
